@@ -1,9 +1,8 @@
-###SafeSystem
-```
-背景：老人防跌倒系统
-```
+### SafeSystem
 
-```
-架构:spring mvc+ mybatis
+#### 背景 
+老人防跌倒系统
+
+#### 架构
+spring mvc+ mybatis
 数据库:mysql
-```
