@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.SafeDao">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <insert id="insertData"  parameterType="dao.SafeDao">
+        INSERT INTO safesystem (state,temperature,heartrate,longitude,latitude,updateDate)
+        VALUE(#{state},#{temperature},#{heartrate},#{longitude},#{latitude},#{updateDate})
+    </insert>
+
+
+    <select id="getList"   resultType="entity.SafeEntity">
+        --         SELECT * from smart_windows
+        SELECT * from safesystem order by id desc LIMIT 0,5
+    </select>
+
+    <select id="getOne"   resultType="entity.SafeEntity">
+        SELECT * from safesystem order by id desc LIMIT 0,1
+    </select>
+</mapper>
